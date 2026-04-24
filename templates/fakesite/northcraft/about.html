@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>О компании — NorthCraft</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="header"><div class="container">
+<a href="index.html" class="logo">🏗️ NorthCraft</a>
+<nav class="nav"><ul class="nav-list">
+<li><a href="index.html" class="nav-link">Главная</a></li>
+<li class="dropdown"><a href="services.html" class="nav-link">Услуги <span class="arrow">▾</span></a>
+<ul class="dropdown-menu"><li><a href="services.html#build">Строительство</a></li><li><a href="services.html#repair">Ремонт</a></li><li><a href="services.html#design">Дизайн-проект</a></li><li><a href="services.html#exterior">Фасады</a></li></ul></li>
+<li><a href="about.html" class="nav-link active">О нас</a></li>
+<li><a href="contacts.html" class="nav-link">Контакты</a></li></ul>
+<a href="contacts.html" class="btn-cta">Получить смету</a></nav>
+<button class="burger" onclick="toggleNav()">☰</button></div></header>
+<div class="page-hero"><div class="container"><h1>О компании NorthCraft</h1><p>13 лет строим и ремонтируем в Москве — ответственно, честно, с гарантией</p></div></div>
+<section class="section"><div class="container">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:64px">
+<div><span class="section-tag">Наша история</span>
+<h2 style="font-size:1.8rem;color:var(--heading);font-weight:800;margin-bottom:16px">Основаны в 2011 году</h2>
+<p style="color:var(--text-muted);line-height:1.8;margin-bottom:16px">NorthCraft создана в 2011 году как небольшая бригада строителей-отделочников. Сегодня в компании работают 120 специалистов: прорабы, каменщики, плиточники, электрики, сантехники и дизайнеры.</p>
+<p style="color:var(--text-muted);line-height:1.8">За 13 лет сдали 340+ объектов: от студий до загородных коттеджей. Все работы — по договору с фиксированной ценой.</p></div>
+<div class="service-visual">🏗️</div></div>
+<div class="section-head"><span class="section-tag">Команда</span><h2>Руководство</h2></div>
+<div class="team-grid">
+<div class="team-card"><div class="team-avatar">👷</div><h3>Николай Захаров</h3><div class="role">Генеральный директор</div><p>Строитель в третьем поколении. Основатель компании.</p></div>
+<div class="team-card"><div class="team-avatar">👩‍💼</div><h3>Светлана Романова</h3><div class="role">Коммерческий директор</div><p>Управляет клиентской службой и сметным отделом.</p></div>
+<div class="team-card"><div class="team-avatar">🏗️</div><h3>Олег Тимофеев</h3><div class="role">Главный инженер</div><p>20 лет в строительстве. Отвечает за качество всех объектов.</p></div>
+</div></div></section>
+<footer class="footer"><div class="container"><div class="footer-grid">
+<div class="footer-brand"><a href="index.html" class="logo">🏗️ NorthCraft</a><p>Строительство и ремонт в Москве и Подмосковье с 2011 года.</p></div>
+<div class="footer-col"><h4>Услуги</h4><ul><li><a href="services.html#build">Строительство</a></li><li><a href="services.html#repair">Ремонт</a></li><li><a href="services.html#design">Дизайн-проект</a></li><li><a href="services.html#exterior">Фасады</a></li></ul></div>
+<div class="footer-col"><h4>Компания</h4><ul><li><a href="about.html">О нас</a></li><li><a href="contacts.html">Контакты</a></li></ul></div>
+<div class="footer-col"><h4>Контакты</h4><p>info@northcraft.ru</p><p>+7 (495) 987-65-43</p><p>Москва, Проспект Мира, 87</p></div>
+</div><div class="footer-bottom"><span>© 2024 NorthCraft. СРО НП «Строители Москвы» № СРО-С-011-27112009.</span></div></div></footer><script>function toggleNav(){document.querySelector('.nav').classList.toggle('open');}
+document.querySelectorAll('.dropdown').forEach(function(d){d.addEventListener('mouseenter',function(){this.querySelector('.dropdown-menu').style.display='block';});d.addEventListener('mouseleave',function(){this.querySelector('.dropdown-menu').style.display='none';});});</script></body></html>

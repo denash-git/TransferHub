@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакты — NorthCraft</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="header"><div class="container">
+<a href="index.html" class="logo">🏗️ NorthCraft</a>
+<nav class="nav"><ul class="nav-list">
+<li><a href="index.html" class="nav-link">Главная</a></li>
+<li class="dropdown"><a href="services.html" class="nav-link">Услуги <span class="arrow">▾</span></a>
+<ul class="dropdown-menu"><li><a href="services.html#build">Строительство</a></li><li><a href="services.html#repair">Ремонт</a></li><li><a href="services.html#design">Дизайн-проект</a></li><li><a href="services.html#exterior">Фасады</a></li></ul></li>
+<li><a href="about.html" class="nav-link">О нас</a></li>
+<li><a href="contacts.html" class="nav-link active">Контакты</a></li></ul>
+<a href="contacts.html" class="btn-cta">Получить смету</a></nav>
+<button class="burger" onclick="toggleNav()">☰</button></div></header>
+<div class="page-hero"><div class="container"><h1>Контакты</h1><p>Оставьте заявку — составим смету бесплатно в течение одного дня</p></div></div>
+<section class="section"><div class="container"><div class="contact-grid">
+<div><h2 style="color:var(--heading);font-weight:800;margin-bottom:24px">Заявка на смету</h2>
+<form class="contact-form" id="cf2">
+<div class="form-group"><label>Ваше имя *</label><input type="text" placeholder="Иван Иванов" required></div>
+<div class="form-group"><label>Телефон *</label><input type="tel" placeholder="+7 (___) ___-__-__" required></div>
+<div class="form-group"><label>Тип объекта</label><select><option>Выберите тип</option><option>Квартира</option><option>Частный дом/коттедж</option><option>Офис</option><option>Строительство с нуля</option></select></div>
+<div class="form-group"><label>Площадь объекта</label><input type="text" placeholder="например: 65 кв.м"></div>
+<div class="form-group"><label>Описание работ</label><textarea placeholder="Что нужно сделать? Перечислите основные виды работ или опишите своими словами."></textarea></div>
+<button type="button" class="btn-submit" onclick="document.getElementById('cf2').innerHTML='<div style=padding:32px;text-align:center><h3 style=color:var(--heading)>Заявка принята!</h3><p style=color:var(--text-muted)>Перезвоним и составим смету в течение дня.</p></div>'">Получить смету</button>
+</form></div>
+<div class="contact-info"><h3>Как нас найти</h3>
+<div class="contact-item"><div class="ci-icon">📍</div><div class="ci-text"><p>Офис</p><p>Москва, Проспект Мира, 87, офис 201</p></div></div>
+<div class="contact-item"><div class="ci-icon">📍</div><div class="ci-text"><p>Производственная база</p><p>МО, г. Мытищи, ул. Рабочая, 12</p></div></div>
+<div class="contact-item"><div class="ci-icon">📞</div><div class="ci-text"><p>Телефон</p><p>+7 (495) 987-65-43</p><p>Пн-Сб, 9:00–19:00</p></div></div>
+<div class="contact-item"><div class="ci-icon">✉️</div><div class="ci-text"><p>Email</p><p>info@northcraft.ru</p></div></div>
+<div class="map-placeholder">🗺️ Проспект Мира, 87 — Москва</div>
+</div></div></div></section>
+<footer class="footer"><div class="container"><div class="footer-grid">
+<div class="footer-brand"><a href="index.html" class="logo">🏗️ NorthCraft</a><p>Строительство и ремонт в Москве и Подмосковье с 2011 года.</p></div>
+<div class="footer-col"><h4>Услуги</h4><ul><li><a href="services.html#build">Строительство</a></li><li><a href="services.html#repair">Ремонт</a></li><li><a href="services.html#design">Дизайн-проект</a></li><li><a href="services.html#exterior">Фасады</a></li></ul></div>
+<div class="footer-col"><h4>Компания</h4><ul><li><a href="about.html">О нас</a></li><li><a href="contacts.html">Контакты</a></li></ul></div>
+<div class="footer-col"><h4>Контакты</h4><p>info@northcraft.ru</p><p>+7 (495) 987-65-43</p><p>Москва, Проспект Мира, 87</p></div>
+</div><div class="footer-bottom"><span>© 2024 NorthCraft. СРО НП «Строители Москвы» № СРО-С-011-27112009.</span></div></div></footer><script>function toggleNav(){document.querySelector('.nav').classList.toggle('open');}
+document.querySelectorAll('.dropdown').forEach(function(d){d.addEventListener('mouseenter',function(){this.querySelector('.dropdown-menu').style.display='block';});d.addEventListener('mouseleave',function(){this.querySelector('.dropdown-menu').style.display='none';});});</script></body></html>

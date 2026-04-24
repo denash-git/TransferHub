@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>О компании — TechVision</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="logo"><span class="logo-icon">⬡</span> TechVision</a>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Главная</a></li>
+        <li class="dropdown"><a href="services.html" class="nav-link">Услуги <span class="arrow">▾</span></a>
+          <ul class="dropdown-menu"><li><a href="services.html#web">Веб-разработка</a></li><li><a href="services.html#mobile">Мобильные приложения</a></li><li><a href="services.html#automation">Автоматизация</a></li><li><a href="services.html#consulting">IT-консалтинг</a></li></ul>
+        </li>
+        <li><a href="about.html" class="nav-link active">О нас</a></li>
+        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+      </ul>
+      <a href="contacts.html" class="btn-cta">Обсудить проект</a>
+    </nav>
+    <button class="burger" onclick="toggleNav()">☰</button>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <h1>О компании TechVision</h1>
+    <p>Семь лет мы создаём программные решения, которые помогают бизнесу работать эффективнее</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:80px">
+      <div>
+        <span class="section-tag">Наша история</span>
+        <h2 style="font-size:1.8rem;color:var(--heading);margin-bottom:16px">Основаны в 2017 году в Москве</h2>
+        <p style="color:var(--text-muted);line-height:1.8;margin-bottom:16px">TechVision начиналась как небольшая команда из пяти разработчиков, объединённых одной идеей: создавать качественное ПО, которое решает реальные задачи бизнеса, а не просто выглядит красиво в презентации.</p>
+        <p style="color:var(--text-muted);line-height:1.8;margin-bottom:16px">Сегодня нас 45 человек: фронтенд и бэкенд разработчики, дизайнеры, аналитики, тестировщики и менеджеры проектов. За семь лет мы реализовали более 120 проектов для клиентов из финансового сектора, ритейла, логистики и промышленности.</p>
+        <p style="color:var(--text-muted);line-height:1.8">Мы не занимаемся аутстаффингом и не "сдаём" разработчиков. Мы берём ответственность за результат целиком.</p>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:32px;text-align:center;font-size:80px">🏢</div>
+    </div>
+
+    <div class="section-head">
+      <span class="section-tag">Ценности</span>
+      <h2>Как мы работаем</h2>
+    </div>
+    <div class="cards-grid" style="margin-bottom:80px">
+      <div class="card"><div class="card-icon">🎯</div><h3>Результат важнее процесса</h3><p>Мы не продаём часы разработки — мы отвечаем за конечный продукт. Если что-то идёт не так, мы сами исправляем за наш счёт.</p></div>
+      <div class="card"><div class="card-icon">🔍</div><h3>Прозрачность</h3><p>Еженедельные созвоны, доступ к трекеру задач, видеозаписи демо. Вы всегда знаете, что происходит с вашим проектом.</p></div>
+      <div class="card"><div class="card-icon">📚</div><h3>Документированный код</h3><p>Пишем код так, чтобы ваша команда могла продолжить работу без нас. Документация — обязательная часть проекта.</p></div>
+      <div class="card"><div class="card-icon">🚀</div><h3>Современный стек</h3><p>Применяем проверенные технологии: React, Next.js, Node.js, Python, PostgreSQL, Kubernetes. Не гонимся за хайпом без причины.</p></div>
+    </div>
+
+    <div id="team">
+      <div class="section-head">
+        <span class="section-tag">Команда</span>
+        <h2>Руководство компании</h2>
+      </div>
+      <div class="team-grid">
+        <div class="team-card"><div class="team-avatar">👨‍💻</div><h3>Алексей Воронин</h3><div class="role">CEO, сооснователь</div><p>15 лет в разработке. Бывший техлид в Яндексе, строил команды в трёх стартапах.</p></div>
+        <div class="team-card"><div class="team-avatar">👩‍💼</div><h3>Мария Сергеева</h3><div class="role">CTO</div><p>Специалист по архитектуре highload-систем. PhD в Computer Science, MIPT.</p></div>
+        <div class="team-card"><div class="team-avatar">👨‍🎨</div><h3>Дмитрий Ковалёв</h3><div class="role">Head of Design</div><p>10 лет в product design. Делал интерфейсы для Тинькофф и Сбера.</p></div>
+        <div class="team-card"><div class="team-avatar">👩‍💻</div><h3>Елена Кузнецова</h3><div class="role">Head of Development</div><p>Fullstack-разработчик, Team Lead с опытом в финтехе и edtech.</p></div>
+        <div class="team-card"><div class="team-avatar">👨‍📊</div><h3>Павел Жуков</h3><div class="role">Head of QA</div><p>Выстроил процессы тестирования для 60+ проектов. Фанат automation-тестов.</p></div>
+        <div class="team-card"><div class="team-avatar">👩‍🚀</div><h3>Анна Белова</h3><div class="role">Project Manager</div><p>PMP, Scrum Master. Ведёт параллельно до 8 проектов без потери качества.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="logo"><span class="logo-icon">⬡</span> TechVision</a><p>Разрабатываем программные решения для бизнеса любого масштаба.</p></div>
+      <div class="footer-col"><h4>Услуги</h4><ul><li><a href="services.html#web">Веб-разработка</a></li><li><a href="services.html#mobile">Мобильные приложения</a></li><li><a href="services.html#automation">Автоматизация</a></li></ul></div>
+      <div class="footer-col"><h4>Компания</h4><ul><li><a href="about.html">О нас</a></li><li><a href="about.html#team">Команда</a></li><li><a href="contacts.html">Контакты</a></li></ul></div>
+      <div class="footer-col"><h4>Контакты</h4><p>info@techvision.dev</p><p>+7 (495) 123-45-67</p><p>Москва, ул. Новый Арбат, 25</p></div>
+    </div>
+    <div class="footer-bottom"><span>© 2024 TechVision. Все права защищены.</span></div>
+  </div>
+</footer>
+<script>
+function toggleNav(){document.querySelector('.nav').classList.toggle('open');}
+document.querySelectorAll('.dropdown').forEach(function(d){d.addEventListener('mouseenter',function(){this.querySelector('.dropdown-menu').style.display='block';});d.addEventListener('mouseleave',function(){this.querySelector('.dropdown-menu').style.display='none';});});
+</script>
+</body>
+</html>

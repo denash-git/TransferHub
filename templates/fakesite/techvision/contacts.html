@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакты — TechVision</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="logo"><span class="logo-icon">⬡</span> TechVision</a>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Главная</a></li>
+        <li class="dropdown"><a href="services.html" class="nav-link">Услуги <span class="arrow">▾</span></a>
+          <ul class="dropdown-menu"><li><a href="services.html#web">Веб-разработка</a></li><li><a href="services.html#mobile">Мобильные приложения</a></li><li><a href="services.html#automation">Автоматизация</a></li><li><a href="services.html#consulting">IT-консалтинг</a></li></ul>
+        </li>
+        <li><a href="about.html" class="nav-link">О нас</a></li>
+        <li><a href="contacts.html" class="nav-link active">Контакты</a></li>
+      </ul>
+      <a href="contacts.html" class="btn-cta">Обсудить проект</a>
+    </nav>
+    <button class="burger" onclick="toggleNav()">☰</button>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Свяжитесь с нами</h1>
+    <p>Расскажите о вашем проекте — ответим и дадим оценку в течение одного рабочего дня</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <h2 style="color:var(--heading);margin-bottom:24px">Написать нам</h2>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label>Ваше имя *</label>
+            <input type="text" placeholder="Иван Иванов" required>
+          </div>
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" placeholder="ivan@company.ru" required>
+          </div>
+          <div class="form-group">
+            <label>Телефон</label>
+            <input type="tel" placeholder="+7 (___) ___-__-__">
+          </div>
+          <div class="form-group">
+            <label>Тип проекта</label>
+            <select>
+              <option value="">Выберите тип</option>
+              <option>Веб-приложение</option>
+              <option>Мобильное приложение</option>
+              <option>Автоматизация процессов</option>
+              <option>IT-консалтинг</option>
+              <option>Другое</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Описание задачи *</label>
+            <textarea placeholder="Опишите вашу задачу: что нужно создать, какие есть требования, какой ожидается результат..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Отправить заявку</button>
+          <p style="font-size:12px;color:var(--text-muted);margin-top:8px">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+        </form>
+      </div>
+      <div class="contact-info">
+        <h3>Контактная информация</h3>
+        <div class="contact-item">
+          <div class="ci-icon">📍</div>
+          <div class="ci-text"><p>Адрес</p><p>г. Москва, ул. Новый Арбат, 25, офис 412</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">📞</div>
+          <div class="ci-text"><p>Телефон</p><p>+7 (495) 123-45-67</p><p>Пн–Пт, 9:00–18:00</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">✉️</div>
+          <div class="ci-text"><p>Email</p><p>info@techvision.dev</p><p>hello@techvision.dev (общие вопросы)</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">💬</div>
+          <div class="ci-text"><p>Мессенджеры</p><p>Telegram: @techvision_dev</p><p>WhatsApp: +7 (999) 123-45-67</p></div>
+        </div>
+        <div class="map-placeholder">🗺️ Новый Арбат, 25 — Москва</div>
+        <div style="margin-top:24px;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px">
+          <p style="color:var(--heading);font-weight:600;margin-bottom:8px">Время ответа</p>
+          <p style="color:var(--text-muted);font-size:14px">Мы отвечаем на заявки в течение одного рабочего дня. На срочные вопросы — в течение нескольких часов. Позвоните, если нужен быстрый ответ.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="logo"><span class="logo-icon">⬡</span> TechVision</a><p>Разрабатываем программные решения для бизнеса любого масштаба.</p></div>
+      <div class="footer-col"><h4>Услуги</h4><ul><li><a href="services.html#web">Веб-разработка</a></li><li><a href="services.html#mobile">Мобильные приложения</a></li><li><a href="services.html#automation">Автоматизация</a></li></ul></div>
+      <div class="footer-col"><h4>Компания</h4><ul><li><a href="about.html">О нас</a></li><li><a href="contacts.html">Контакты</a></li></ul></div>
+      <div class="footer-col"><h4>Контакты</h4><p>info@techvision.dev</p><p>+7 (495) 123-45-67</p><p>Москва, ул. Новый Арбат, 25</p></div>
+    </div>
+    <div class="footer-bottom"><span>© 2024 TechVision. Все права защищены.</span></div>
+  </div>
+</footer>
+<script>
+function toggleNav(){document.querySelector('.nav').classList.toggle('open');}
+document.querySelectorAll('.dropdown').forEach(function(d){d.addEventListener('mouseenter',function(){this.querySelector('.dropdown-menu').style.display='block';});d.addEventListener('mouseleave',function(){this.querySelector('.dropdown-menu').style.display='none';});});
+function handleSubmit(e){e.preventDefault();e.target.innerHTML='<div style="text-align:center;padding:40px;color:var(--accent2)"><div style="font-size:48px;margin-bottom:16px">✓</div><h3 style="color:var(--heading);margin-bottom:8px">Заявка отправлена!</h3><p style="color:var(--text-muted)">Мы ответим в течение одного рабочего дня.</p></div>';}
+</script>
+</body>
+</html>

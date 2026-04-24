@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>О компании — Meridian Logistics</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="header"><div class="container">
+<a href="index.html" class="logo">🚛 Meridian</a>
+<nav class="nav"><ul class="nav-list">
+<li><a href="index.html" class="nav-link">Главная</a></li>
+<li class="dropdown"><a href="services.html" class="nav-link">Услуги <span class="arrow">▾</span></a>
+<ul class="dropdown-menu"><li><a href="services.html#auto">Автодоставка</a></li><li><a href="services.html#rail">Ж/д перевозки</a></li><li><a href="services.html#air">Авиадоставка</a></li><li><a href="services.html#storage">Склад</a></li></ul></li>
+<li><a href="about.html" class="nav-link active">О компании</a></li>
+<li><a href="contacts.html" class="nav-link">Контакты</a></li></ul>
+<a href="contacts.html" class="btn-cta">Заказать доставку</a></nav>
+<button class="burger" onclick="toggleNav()">☰</button></div></header>
+<div class="page-hero"><div class="container"><h1>О компании</h1><p>Meridian Logistics — 15 лет надёжной логистики для российского бизнеса</p></div></div>
+<section class="section"><div class="container">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:64px">
+<div><span class="section-tag">История</span>
+<h2 style="font-size:1.8rem;color:var(--heading);font-weight:800;margin-bottom:16px">Основаны в 2009 году</h2>
+<p style="color:var(--text-muted);line-height:1.8;margin-bottom:16px">Meridian Logistics начинала с небольшого парка из 5 грузовиков. Сегодня это федеральная компания с 200+ единицами техники, собственными складами в трёх городах и штатом более 400 человек.</p>
+<p style="color:var(--text-muted);line-height:1.8">Работаем с производственными предприятиями, торговыми сетями и строительными компаниями по всей России.</p></div>
+<div class="service-visual">🏢</div></div>
+<div class="section-head"><span class="section-tag">Команда</span><h2>Руководство компании</h2></div>
+<div class="team-grid">
+<div class="team-card"><div class="team-avatar">👨‍💼</div><h3>Сергей Морозов</h3><div class="role">Генеральный директор</div><p>25 лет в транспортной отрасли. Основатель компании.</p></div>
+<div class="team-card"><div class="team-avatar">👩‍💼</div><h3>Ирина Васильева</h3><div class="role">Коммерческий директор</div><p>Отвечает за ключевых клиентов и развитие бизнеса.</p></div>
+<div class="team-card"><div class="team-avatar">👨‍🔧</div><h3>Андрей Петров</h3><div class="role">Директор по логистике</div><p>Оптимизирует маршруты и управляет автопарком.</p></div>
+</div></div></section>
+<footer class="footer"><div class="container"><div class="footer-grid">
+<div class="footer-brand"><a href="index.html" class="logo">🚛 Meridian</a><p>Надёжные грузоперевозки по России и СНГ с 2009 года.</p></div>
+<div class="footer-col"><h4>Услуги</h4><ul><li><a href="services.html#auto">Автодоставка</a></li><li><a href="services.html#rail">Ж/д перевозки</a></li><li><a href="services.html#air">Авиадоставка</a></li></ul></div>
+<div class="footer-col"><h4>Компания</h4><ul><li><a href="about.html">О нас</a></li><li><a href="contacts.html">Контакты</a></li></ul></div>
+<div class="footer-col"><h4>Контакты</h4><p>logistics@meridian-group.ru</p><p>+7 (800) 555-01-23</p><p>Москва, Варшавское шоссе, 118с1</p></div>
+</div><div class="footer-bottom"><span>© 2024 Meridian Logistics.</span></div></div></footer><script>function toggleNav(){document.querySelector('.nav').classList.toggle('open');}
+document.querySelectorAll('.dropdown').forEach(function(d){d.addEventListener('mouseenter',function(){this.querySelector('.dropdown-menu').style.display='block';});d.addEventListener('mouseleave',function(){this.querySelector('.dropdown-menu').style.display='none';});});</script>
+</body></html>

@@ -1,0 +1,5 @@
+# Зависимости Python для runtime-меню TransferHub
+
+bcrypt
+qrcode
+paramiko

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NorthCraft — Строительство и ремонт в Москве</title>
+<meta name="description" content="NorthCraft — строительство домов, ремонт квартир и офисов под ключ в Москве и Московской области.">
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="header"><div class="container">
+<a href="index.html" class="logo">🏗️ NorthCraft</a>
+<nav class="nav"><ul class="nav-list">
+<li><a href="index.html" class="nav-link active">Главная</a></li>
+<li class="dropdown"><a href="services.html" class="nav-link">Услуги <span class="arrow">▾</span></a>
+<ul class="dropdown-menu"><li><a href="services.html#build">Строительство</a></li><li><a href="services.html#repair">Ремонт</a></li><li><a href="services.html#design">Дизайн-проект</a></li><li><a href="services.html#exterior">Фасады</a></li></ul></li>
+<li><a href="about.html" class="nav-link">О нас</a></li>
+<li><a href="contacts.html" class="nav-link">Контакты</a></li></ul>
+<a href="contacts.html" class="btn-cta">Получить смету</a></nav>
+<button class="burger" onclick="toggleNav()">☰</button></div></header>
+<section class="hero"><div class="container"><div class="hero-content">
+<p class="hero-tag">Строительство и ремонт в Москве</p>
+<h1>Строим и обновляем пространства под ключ</h1>
+<p class="hero-sub">13 лет опыта. Строительство коттеджей, ремонт квартир и офисов. Собственные бригады, официальный договор, гарантия качества 5 лет.</p>
+<div class="hero-btns"><a href="contacts.html" class="btn-primary">Рассчитать смету</a><a href="services.html" class="btn-ghost">Наши услуги</a></div>
+</div><div class="hero-badges">
+<div class="badge">🏆 Член СРО НП «Строители Москвы»</div>
+<div class="badge">📋 Гарантия на все работы — 5 лет</div>
+<div class="badge">🔒 Фиксированная стоимость по договору</div>
+</div></div></section>
+<section class="stats"><div class="container"><div class="stats-grid">
+<div class="stat"><span class="stat-num">13+</span><span>лет опыта</span></div>
+<div class="stat"><span class="stat-num">340+</span><span>объектов сдано</span></div>
+<div class="stat"><span class="stat-num">120</span><span>специалистов</span></div>
+<div class="stat"><span class="stat-num">5 лет</span><span>гарантия</span></div>
+</div></div></section>
+<section class="section"><div class="container">
+<div class="section-head"><span class="section-tag">Что мы строим</span><h2>Наши услуги</h2><p>От фундамента до финишной отделки — работаем на всех этапах</p></div>
+<div class="cards-grid">
+<div class="card"><div class="card-icon">🏠</div><h3>Строительство домов</h3><p>Каркасные, газоблочные и кирпичные дома в Подмосковье. Работаем по типовым и индивидуальным проектам.</p><a href="services.html#build" class="card-link">Подробнее →</a></div>
+<div class="card"><div class="card-icon">🔨</div><h3>Ремонт квартир и офисов</h3><p>Косметический, капитальный и дизайнерский ремонт. Полное сопровождение от проекта до уборки после работ.</p><a href="services.html#repair" class="card-link">Подробнее →</a></div>
+<div class="card"><div class="card-icon">✏️</div><h3>Дизайн-проект</h3><p>Разрабатываем дизайн-проекты квартир, домов и коммерческих помещений. 3D-визуализация включена.</p><a href="services.html#design" class="card-link">Подробнее →</a></div>
+<div class="card"><div class="card-icon">🏢</div><h3>Фасады и утепление</h3><p>Монтаж вентфасадов, мокрая штукатурка, утепление ЭППС и минватой. Гарантия 10 лет.</p><a href="services.html#exterior" class="card-link">Подробнее →</a></div>
+</div></div></section>
+<section class="cta-section"><div class="container"><div class="cta-box">
+<h2>Нужна смета?</h2>
+<p>Опишите объект — составим смету бесплатно в течение одного дня</p>
+<a href="contacts.html" class="btn-primary">Получить смету</a>
+</div></div></section>
+<footer class="footer"><div class="container"><div class="footer-grid">
+<div class="footer-brand"><a href="index.html" class="logo">🏗️ NorthCraft</a><p>Строительство и ремонт в Москве и Подмосковье с 2011 года.</p></div>
+<div class="footer-col"><h4>Услуги</h4><ul><li><a href="services.html#build">Строительство</a></li><li><a href="services.html#repair">Ремонт</a></li><li><a href="services.html#design">Дизайн-проект</a></li><li><a href="services.html#exterior">Фасады</a></li></ul></div>
+<div class="footer-col"><h4>Компания</h4><ul><li><a href="about.html">О нас</a></li><li><a href="contacts.html">Контакты</a></li></ul></div>
+<div class="footer-col"><h4>Контакты</h4><p>info@northcraft.ru</p><p>+7 (495) 987-65-43</p><p>Москва, Проспект Мира, 87</p></div>
+</div><div class="footer-bottom"><span>© 2024 NorthCraft. СРО НП «Строители Москвы» № СРО-С-011-27112009.</span></div></div></footer><script>function toggleNav(){document.querySelector('.nav').classList.toggle('open');}
+document.querySelectorAll('.dropdown').forEach(function(d){d.addEventListener('mouseenter',function(){this.querySelector('.dropdown-menu').style.display='block';});d.addEventListener('mouseleave',function(){this.querySelector('.dropdown-menu').style.display='none';});});</script>
+</body></html>

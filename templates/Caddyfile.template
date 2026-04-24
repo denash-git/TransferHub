@@ -1,0 +1,44 @@
+{
+$ACME_GLOBAL_OPTIONS
+    order forward_proxy before file_server
+}
+
+# Caddyfile — TransferHub NaiveProxy
+# Этот файл генерируется установщиком из шаблона.
+# Для изменения учётных данных используй команду: menu
+
+# HTTP → HTTPS редирект
+:80 {
+    redir https://{host}{uri} permanent
+}
+
+# Основной HTTPS сервер
+# Важно: для forward_proxy адрес должен начинаться с :443
+:443, $DOMAIN {
+    # TLS: Caddy автоматически получает сертификат через ACME (Let's Encrypt)
+    # Требует чтобы домен резолвился на этот IP и порт 80 был открыт во время выдачи
+    tls $ADMIN_EMAIL
+
+    # NaiveProxy forward proxy
+    # probe_resistance включает режим маскировки: неавторизованные запросы
+    # не получают ошибку 407, а видят обычный веб-сайт (file_server ниже).
+    # Это защищает от активного обнаружения прокси-серверов.
+    forward_proxy {
+        basic_auth $NAIVE_USERNAME $NAIVE_PASSWORD
+        hide_ip
+        hide_via
+        probe_resistance
+    }
+
+    # Фейковый сайт — показывается всем кто заходит без авторизации
+    # (обычные браузеры, сканеры, активные зонды)
+    file_server {
+        root /root/TransferHub/caddy/fakesite
+    }
+
+    # Логи — пишем только ошибки в stderr (systemd journald подхватит)
+    log {
+        output stderr
+        level ERROR
+    }
+}

@@ -1,0 +1,33 @@
+# SSH ключи — никогда не коммитить
+github_deploy_key
+github_deploy_key.pub
+*.pem
+*.key
+
+# Конфиг с секретами — только локально
+instance.env
+
+# Локальная техническая документация — не публикуется
+CLAUDE.md
+AGENTS.md
+
+# Python кэш
+__pycache__/
+*.py[cod]
+*.pyc
+.venv/
+
+# Docker runtime данные
+naive/data/
+naive/logs/
+
+# SSH config
+.ssh/
+.claude/
+
+# Backup файлы
+backup/
+
+# Локальные служебные файлы — не публикуем
+runtime-images.lock.json
+SPEEDTEST_PLAN.md

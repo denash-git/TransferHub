@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакты — Meridian Logistics</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="header"><div class="container">
+<a href="index.html" class="logo">🚛 Meridian</a>
+<nav class="nav"><ul class="nav-list">
+<li><a href="index.html" class="nav-link">Главная</a></li>
+<li class="dropdown"><a href="services.html" class="nav-link">Услуги <span class="arrow">▾</span></a>
+<ul class="dropdown-menu"><li><a href="services.html#auto">Автодоставка</a></li><li><a href="services.html#rail">Ж/д перевозки</a></li><li><a href="services.html#air">Авиадоставка</a></li><li><a href="services.html#storage">Склад</a></li></ul></li>
+<li><a href="about.html" class="nav-link">О компании</a></li>
+<li><a href="contacts.html" class="nav-link active">Контакты</a></li></ul>
+<a href="contacts.html" class="btn-cta">Заказать доставку</a></nav>
+<button class="burger" onclick="toggleNav()">☰</button></div></header>
+<div class="page-hero"><div class="container"><h1>Контакты</h1><p>Позвоните или оставьте заявку — перезвоним через 15 минут</p></div></div>
+<section class="section"><div class="container"><div class="contact-grid">
+<div><h2 style="color:var(--heading);font-weight:800;margin-bottom:24px">Заявка на доставку</h2>
+<form class="contact-form" onsubmit="return false" id="cf">
+<div class="form-group"><label>Откуда *</label><input type="text" placeholder="Город отправления" required></div>
+<div class="form-group"><label>Куда *</label><input type="text" placeholder="Город назначения" required></div>
+<div class="form-group"><label>Тип груза</label><select><option>Выберите тип</option><option>Промышленное оборудование</option><option>Продукты питания</option><option>Строительные материалы</option><option>Другое</option></select></div>
+<div class="form-group"><label>Вес и объём</label><input type="text" placeholder="например: 5 тонн, 20 куб.м"></div>
+<div class="form-group"><label>Контактный телефон *</label><input type="tel" placeholder="+7 (___) ___-__-__" required></div>
+<div class="form-group"><label>Комментарий</label><textarea placeholder="Особые условия, сроки, пожелания..."></textarea></div>
+<button type="button" class="btn-submit" onclick="document.getElementById('cf').innerHTML='<div style=padding:32px;text-align:center><h3>Заявка принята!</h3><p>Перезвоним через 15 минут.</p></div>'">Отправить заявку</button>
+</form></div>
+<div class="contact-info"><h3>Наши офисы</h3>
+<div class="contact-item"><div class="ci-icon">📍</div><div class="ci-text"><p>Москва (головной офис)</p><p>Варшавское шоссе, 118с1</p></div></div>
+<div class="contact-item"><div class="ci-icon">📍</div><div class="ci-text"><p>Санкт-Петербург</p><p>Московский пр-т, 212</p></div></div>
+<div class="contact-item"><div class="ci-icon">📞</div><div class="ci-text"><p>Единая линия (бесплатно)</p><p>+7 (800) 555-01-23</p><p>Пн-Пт, 8:00–20:00</p></div></div>
+<div class="contact-item"><div class="ci-icon">✉️</div><div class="ci-text"><p>Email</p><p>logistics@meridian-group.ru</p></div></div>
+<div class="map-placeholder">🗺️ Варшавское шоссе, 118с1 — Москва</div>
+</div></div></div></section>
+<footer class="footer"><div class="container"><div class="footer-grid">
+<div class="footer-brand"><a href="index.html" class="logo">🚛 Meridian</a><p>Надёжные грузоперевозки по России и СНГ с 2009 года.</p></div>
+<div class="footer-col"><h4>Услуги</h4><ul><li><a href="services.html#auto">Автодоставка</a></li><li><a href="services.html#rail">Ж/д перевозки</a></li><li><a href="services.html#air">Авиадоставка</a></li></ul></div>
+<div class="footer-col"><h4>Компания</h4><ul><li><a href="about.html">О нас</a></li><li><a href="contacts.html">Контакты</a></li></ul></div>
+<div class="footer-col"><h4>Контакты</h4><p>logistics@meridian-group.ru</p><p>+7 (800) 555-01-23</p><p>Москва, Варшавское шоссе, 118с1</p></div>
+</div><div class="footer-bottom"><span>© 2024 Meridian Logistics.</span></div></div></footer><script>function toggleNav(){document.querySelector('.nav').classList.toggle('open');}
+document.querySelectorAll('.dropdown').forEach(function(d){d.addEventListener('mouseenter',function(){this.querySelector('.dropdown-menu').style.display='block';});d.addEventListener('mouseleave',function(){this.querySelector('.dropdown-menu').style.display='none';});});</script>
+</body></html>

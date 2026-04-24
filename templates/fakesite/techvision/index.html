@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechVision — Разработка программного обеспечения</title>
+<meta name="description" content="TechVision — команда разработчиков, создающих современные веб-приложения, мобильные решения и системы автоматизации для бизнеса.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- ШАПКА -->
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">⬡</span> TechVision
+    </a>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link active">Главная</a></li>
+        <li class="dropdown">
+          <a href="services.html" class="nav-link">Услуги <span class="arrow">▾</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="services.html#web">Веб-разработка</a></li>
+            <li><a href="services.html#mobile">Мобильные приложения</a></li>
+            <li><a href="services.html#automation">Автоматизация</a></li>
+            <li><a href="services.html#consulting">IT-консалтинг</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" class="nav-link">О нас</a></li>
+        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+      </ul>
+      <a href="contacts.html" class="btn-cta">Обсудить проект</a>
+    </nav>
+    <button class="burger" onclick="toggleNav()">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <p class="hero-tag">Программные решения для бизнеса</p>
+      <h1>Создаём цифровые продукты, которые работают</h1>
+      <p class="hero-sub">Разрабатываем веб-приложения, мобильные сервисы и системы автоматизации. Работаем с компаниями от стартапов до крупного бизнеса.</p>
+      <div class="hero-btns">
+        <a href="services.html" class="btn-primary">Посмотреть услуги</a>
+        <a href="contacts.html" class="btn-ghost">Получить консультацию</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="code-card">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <pre><code><span class="kw">const</span> project = {
+  client: <span class="str">"Business"</span>,
+  stack: [<span class="str">"React"</span>, <span class="str">"Node"</span>],
+  delivery: <span class="str">"on time"</span>,
+  quality: <span class="num">100</span>
+};</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- СТАТИСТИКА -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat"><span class="stat-num">120+</span><span>проектов</span></div>
+      <div class="stat"><span class="stat-num">7</span><span>лет на рынке</span></div>
+      <div class="stat"><span class="stat-num">45</span><span>разработчиков</span></div>
+      <div class="stat"><span class="stat-num">98%</span><span>довольных клиентов</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- УСЛУГИ (краткий блок) -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Что мы делаем</span>
+      <h2>Полный цикл разработки</h2>
+      <p>От идеи и прототипа до готового продукта и технической поддержки</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">🌐</div>
+        <h3>Веб-приложения</h3>
+        <p>CRM, ERP, порталы, маркетплейсы — решения любой сложности на современном стеке.</p>
+        <a href="services.html#web" class="card-link">Подробнее →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">📱</div>
+        <h3>Мобильные приложения</h3>
+        <p>iOS и Android под ключ. Нативные и кросс-платформенные решения на React Native и Flutter.</p>
+        <a href="services.html#mobile" class="card-link">Подробнее →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚙️</div>
+        <h3>Автоматизация</h3>
+        <p>Интеграции, боты, скрипты и сервисы, которые избавляют вас от рутинной работы.</p>
+        <a href="services.html#automation" class="card-link">Подробнее →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">💡</div>
+        <h3>IT-консалтинг</h3>
+        <p>Аудит архитектуры, выбор технологий, помощь в построении IT-команды.</p>
+        <a href="services.html#consulting" class="card-link">Подробнее →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box">
+      <h2>Готовы начать проект?</h2>
+      <p>Расскажите о вашей задаче — ответим в течение одного рабочего дня</p>
+      <a href="contacts.html" class="btn-primary">Написать нам</a>
+    </div>
+  </div>
+</section>
+
+<!-- ФУТЕР -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="logo-icon">⬡</span> TechVision</a>
+        <p>Разрабатываем программные решения, которые помогают бизнесу расти.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Услуги</h4>
+        <ul>
+          <li><a href="services.html#web">Веб-разработка</a></li>
+          <li><a href="services.html#mobile">Мобильные приложения</a></li>
+          <li><a href="services.html#automation">Автоматизация</a></li>
+          <li><a href="services.html#consulting">IT-консалтинг</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Компания</h4>
+        <ul>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="about.html#team">Команда</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Контакты</h4>
+        <p>info@techvision.dev</p>
+        <p>+7 (495) 123-45-67</p>
+        <p>Москва, ул. Новый Арбат, 25</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 TechVision. Все права защищены.</span>
+    </div>
+  </div>
+</footer>
+<script>
+function toggleNav(){document.querySelector('.nav').classList.toggle('open');}
+document.querySelectorAll('.dropdown').forEach(function(d){
+  d.addEventListener('mouseenter',function(){this.querySelector('.dropdown-menu').style.display='block';});
+  d.addEventListener('mouseleave',function(){this.querySelector('.dropdown-menu').style.display='none';});
+});
+</script>
+</body>
+</html>

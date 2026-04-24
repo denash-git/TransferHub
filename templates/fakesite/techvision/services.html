@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Услуги — TechVision</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="logo"><span class="logo-icon">⬡</span> TechVision</a>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Главная</a></li>
+        <li class="dropdown">
+          <a href="services.html" class="nav-link active">Услуги <span class="arrow">▾</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#web">Веб-разработка</a></li>
+            <li><a href="#mobile">Мобильные приложения</a></li>
+            <li><a href="#automation">Автоматизация</a></li>
+            <li><a href="#consulting">IT-консалтинг</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" class="nav-link">О нас</a></li>
+        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+      </ul>
+      <a href="contacts.html" class="btn-cta">Обсудить проект</a>
+    </nav>
+    <button class="burger" onclick="toggleNav()">☰</button>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Наши услуги</h1>
+    <p>Полный спектр IT-разработки: от прототипа до масштабируемых production-решений</p>
+  </div>
+</div>
+
+<div id="web" class="service-block">
+  <div class="container">
+    <div>
+      <span class="service-tag">Разработка</span>
+      <h2>Веб-приложения</h2>
+      <p>Создаём корпоративные порталы, CRM-системы, маркетплейсы и SaaS-продукты. Работаем по методологии Agile с прозрачными спринтами и демо-сессиями для клиента.</p>
+      <ul class="service-list">
+        <li>Корпоративные порталы и интранет-системы</li>
+        <li>CRM и ERP под требования бизнеса</li>
+        <li>Маркетплейсы и интернет-магазины</li>
+        <li>SaaS-платформы с мультитенантностью</li>
+        <li>REST и GraphQL API для мобильных приложений</li>
+        <li>Интеграции с 1С, SAP, Bitrix</li>
+      </ul>
+    </div>
+    <div class="service-visual">🌐</div>
+  </div>
+</div>
+
+<div id="mobile" class="service-block reverse">
+  <div class="container">
+    <div>
+      <span class="service-tag">Мобильные</span>
+      <h2>Мобильные приложения</h2>
+      <p>Разрабатываем приложения для iOS и Android: от MVP до сложных продуктов с офлайн-режимом, картами, push-уведомлениями и платёжными интеграциями.</p>
+      <ul class="service-list">
+        <li>React Native и Flutter — кросс-платформенно</li>
+        <li>Нативные Swift/Kotlin при высоких требованиях</li>
+        <li>Публикация в App Store и Google Play</li>
+        <li>Интеграция с платёжными системами</li>
+        <li>Push-уведомления и геолокация</li>
+        <li>Аналитика и crash reporting</li>
+      </ul>
+    </div>
+    <div class="service-visual">📱</div>
+  </div>
+</div>
+
+<div id="automation" class="service-block">
+  <div class="container">
+    <div>
+      <span class="service-tag">Автоматизация</span>
+      <h2>Автоматизация процессов</h2>
+      <p>Анализируем ваши бизнес-процессы и находим точки для автоматизации. Создаём интеграции между систмами, боты и сервисы, которые экономят время и ресурсы.</p>
+      <ul class="service-list">
+        <li>Интеграции через API и webhooks</li>
+        <li>Боты для Telegram, WhatsApp, Slack</li>
+        <li>Автоматическая обработка данных и документов</li>
+        <li>Парсинг и агрегация данных</li>
+        <li>ETL-пайплайны и хранилища данных</li>
+        <li>Мониторинг и алертинг систем</li>
+      </ul>
+    </div>
+    <div class="service-visual">⚙️</div>
+  </div>
+</div>
+
+<div id="consulting" class="service-block reverse">
+  <div class="container">
+    <div>
+      <span class="service-tag">Консалтинг</span>
+      <h2>IT-консалтинг</h2>
+      <p>Помогаем компаниям принимать правильные технические решения: от выбора стека и архитектуры до выстраивания процессов разработки.</p>
+      <ul class="service-list">
+        <li>Аудит существующей архитектуры</li>
+        <li>Выбор технологического стека</li>
+        <li>Code review и рекомендации</li>
+        <li>Помощь в подборе IT-команды</li>
+        <li>Составление технических заданий</li>
+        <li>Построение CI/CD и DevOps-процессов</li>
+      </ul>
+    </div>
+    <div class="service-visual">💡</div>
+  </div>
+</div>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box">
+      <h2>Нужна оценка проекта?</h2>
+      <p>Опишите задачу — дадим оценку сроков и стоимости в течение дня</p>
+      <a href="contacts.html" class="btn-primary">Написать нам</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="logo"><span class="logo-icon">⬡</span> TechVision</a><p>Разрабатываем программные решения, которые помогают бизнесу расти.</p></div>
+      <div class="footer-col"><h4>Услуги</h4><ul><li><a href="#web">Веб-разработка</a></li><li><a href="#mobile">Мобильные приложения</a></li><li><a href="#automation">Автоматизация</a></li><li><a href="#consulting">IT-консалтинг</a></li></ul></div>
+      <div class="footer-col"><h4>Компания</h4><ul><li><a href="about.html">О нас</a></li><li><a href="contacts.html">Контакты</a></li></ul></div>
+      <div class="footer-col"><h4>Контакты</h4><p>info@techvision.dev</p><p>+7 (495) 123-45-67</p><p>Москва, ул. Новый Арбат, 25</p></div>
+    </div>
+    <div class="footer-bottom"><span>© 2024 TechVision. Все права защищены.</span></div>
+  </div>
+</footer>
+<script>
+function toggleNav(){document.querySelector('.nav').classList.toggle('open');}
+document.querySelectorAll('.dropdown').forEach(function(d){d.addEventListener('mouseenter',function(){this.querySelector('.dropdown-menu').style.display='block';});d.addEventListener('mouseleave',function(){this.querySelector('.dropdown-menu').style.display='none';});});
+</script>
+</body>
+</html>
