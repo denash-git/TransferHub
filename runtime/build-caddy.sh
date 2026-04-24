@@ -2,7 +2,6 @@
 set -euo pipefail
 
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-LOCK_FILE="${PROJECT_ROOT}/runtime-images.lock.json"
 CADDY_BIN="/usr/local/bin/caddy"
 BUILD_TMP_ROOT="/root/tmp"
 DEFAULT_GO_VERSION="1.26.2"
@@ -87,15 +86,6 @@ main() {
     caddy_ver=$("$CADDY_BIN" version 2>/dev/null | head -1)
     log_ok "Caddy собран и установлен: ${caddy_ver}"
 
-    if command -v jq >/dev/null 2>&1 && [[ -f "$LOCK_FILE" ]]; then
-        digest=$(sha256sum "$CADDY_BIN" | awk '{print $1}')
-        now=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
-        jq --arg ver "${caddy_ver}" --arg digest "${digest}" --arg ts "${now}" \
-            '.locked_at_utc = $ts | .captured_from_host = "'$(hostname)'" |
-             .images.CADDY_IMAGE.pinned_ref = ("sha256:" + $digest) |
-             .images.CADDY_IMAGE.source_ref = ("xcaddy klzgrad/forwardproxy@naive " + $ver)' \
-            "$LOCK_FILE" > "${LOCK_FILE}.tmp" && mv "${LOCK_FILE}.tmp" "$LOCK_FILE"
-    fi
 }
 
 main "$@"

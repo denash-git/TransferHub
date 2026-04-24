@@ -12,7 +12,6 @@ set -euo pipefail
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 INSTANCE_ENV="${PROJECT_ROOT}/instance.env"
 USERS_DB="${PROJECT_ROOT}/users.db"
-LOCK_FILE="${PROJECT_ROOT}/runtime-images.lock.json"
 CADDY_BIN="/usr/local/bin/caddy"
 CADDY_CONFIG="${PROJECT_ROOT}/caddy/Caddyfile"
 CADDY_SERVICE="transferhub-caddy"

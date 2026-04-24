@@ -22,7 +22,6 @@ RESET='\033[0m'
 # -----------------------------------------------------------------------------
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 INSTANCE_ENV="$PROJECT_ROOT/instance.env"
-LOCK_FILE="$PROJECT_ROOT/runtime-images.lock.json"
 CADDY_BIN="/usr/local/bin/caddy"
 CADDY_SERVICE="/etc/systemd/system/transferhub-caddy.service"
 MENU_BIN="/usr/local/bin/menu"
@@ -558,19 +557,6 @@ build_caddy() {
     local caddy_ver
     caddy_ver=$("$CADDY_BIN" version 2>/dev/null | head -1)
     log_ok "Caddy собран и установлен: ${caddy_ver}"
-
-    # Записываем digest (sha256 бинарника) в lock-файл
-    local digest
-    digest=$(sha256sum "$CADDY_BIN" | awk '{print $1}')
-    if command -v jq &>/dev/null; then
-        local now
-        now=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
-        jq --arg ver "${caddy_ver}" --arg digest "${digest}" --arg ts "${now}" \
-            '.locked_at_utc = $ts | .captured_from_host = "'$(hostname)'" |
-             .images.CADDY_IMAGE.pinned_ref = ("sha256:" + $digest) |
-             .images.CADDY_IMAGE.source_ref = ("xcaddy klzgrad/forwardproxy@naive " + $ver)' \
-            "$LOCK_FILE" > "${LOCK_FILE}.tmp" && mv "${LOCK_FILE}.tmp" "$LOCK_FILE"
-    fi
 
     rm -rf "$tmpdir"
     log_ok "Временные файлы Go удалены"
