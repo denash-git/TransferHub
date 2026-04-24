@@ -5,7 +5,7 @@
 set -euo pipefail
 
 REPO_URL="https://github.com/denash-git/TransferHub.git"
-BRANCH="${TRANSFERHUB_BRANCH:-dev}"
+BRANCH="${TRANSFERHUB_BRANCH:-main}"
 INSTALL_DIR="/root/TransferHub"
 CERT_MODE="prod"
 
